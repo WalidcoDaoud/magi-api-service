@@ -91,7 +91,7 @@ export class EmployeeRepository {
   }
 
   async validateUser(email: string): Promise<object> {
-    const query = `SELECT email, password, type_id, status_id FROM public.employee WHERE email = ($1)`;
+    const query = `SELECT id, email, password, type_id, status_id FROM public.employee WHERE email = ($1)`;
     const param = [email];
     const result: IDatabaseReturnModel = await this.db.query(query, param);
 

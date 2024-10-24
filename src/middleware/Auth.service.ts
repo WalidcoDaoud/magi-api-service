@@ -18,8 +18,13 @@ export class AuthService {
     private readonly cryptograph: Cryptography,
   ) {}
 
-  public generateToken(email: string, role: boolean, type: number): string {
-    const payload = { email, role, type };
+  public generateToken(
+    id: number,
+    email: string,
+    role: boolean,
+    type: number,
+  ): string {
+    const payload = { id, email, role, type };
     return this.jwtService.sign(payload);
   }
 
@@ -52,6 +57,7 @@ export class AuthService {
           status: true,
           message: {
             token: this.generateToken(
+              validation.id,
               validation.email,
               data.type,
               validation.type_id,
