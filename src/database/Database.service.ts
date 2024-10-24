@@ -1,4 +1,10 @@
-import { Injectable, OnModuleInit, OnModuleDestroy, ConflictException, InternalServerErrorException } from '@nestjs/common';
+import {
+  Injectable,
+  OnModuleInit,
+  OnModuleDestroy,
+  ConflictException,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { Client } from 'pg';
 import { IDatabaseReturnModel } from '@src/model/DatabaseReturn.model';
 

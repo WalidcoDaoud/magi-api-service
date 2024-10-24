@@ -39,6 +39,7 @@ export class AuthService {
     try {
       const accountData = new ValidateLoginDto(data);
       const validation: ILogin | undefined = await this.findUser(accountData);
+      console.log(validation);
       if (
         validation &&
         validation.status_id === 1 &&

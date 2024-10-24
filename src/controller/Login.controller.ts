@@ -40,6 +40,7 @@ export class LoginController {
     return {
       role: payload.role,
       type: payload.type,
+      id: payload.id,
     };
   }
 }

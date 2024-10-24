@@ -6,8 +6,8 @@ import { CompanyRepository } from '@src/repository/Company.repository';
 import { RandomCode } from '@src/utils/RandomCode.utils';
 import { Cryptography } from '@src/utils/Cryptograph.utils';
 import { Email } from '@src/utils/Email.utils';
-import { AddressRepository } from "@src/repository/Address.repository";
-import { TypeAccountRepository } from "@src/repository/TypeAccount.repository";
+import { AddressRepository } from '@src/repository/Address.repository';
+import { TypeAccountRepository } from '@src/repository/TypeAccount.repository';
 
 @Module({
   imports: [],
